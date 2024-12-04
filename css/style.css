@@ -65,9 +65,16 @@ body {
 
 /* 豎屏設備 */
 @media (orientation: portrait) {
+    .container {
+        padding: 0;
+    }
+    
     .wheel-container {
-        width: 80vw;
-        height: 80vw;
+        width: 100vw;
+        height: 100vw;
+        max-width: 100vh;
+        max-height: 100vh;
+        margin: 0;
     }
 }
 
@@ -93,12 +100,18 @@ and (max-device-width: 1023px) {
 /* 大型手機 */
 @media only screen 
 and (min-device-width: 414px) 
-and (max-device-width: 767px) {
+and (max-device-width: 767px)
+and (orientation: portrait) {
+    .container {
+        padding: 0;
+    }
+    
     .wheel-container {
-        width: 95vw;
-        height: 95vw;
-        max-width: 95vh;
-        max-height: 95vh;
+        width: 100vw;
+        height: 100vw;
+        max-width: 100vh;
+        max-height: 100vh;
+        margin: 0;
     }
 
     #wheelImage,
@@ -111,12 +124,18 @@ and (max-device-width: 767px) {
 
 /* 小型手機 */
 @media only screen 
-and (max-device-width: 413px) {
+and (max-device-width: 413px)
+and (orientation: portrait) {
+    .container {
+        padding: 0;
+    }
+    
     .wheel-container {
-        width: 92vw;
-        height: 92vw;
-        max-width: 92vh;
-        max-height: 92vh;
+        width: 100vw;
+        height: 100vw;
+        max-width: 100vh;
+        max-height: 100vh;
+        margin: 0;
     }
 
     #wheelImage,
@@ -200,5 +219,41 @@ and (min-width: 1367px) {
             margin: auto;
             transform-origin: center;
         }
+    }
+}
+
+/* iPad Pro 豎屏 */
+@media only screen 
+and (min-device-width: 1024px) 
+and (max-device-width: 1366px)
+and (orientation: portrait) {
+    .container {
+        padding: 0;
+    }
+    
+    .wheel-container {
+        width: 100vw;
+        height: 100vw;
+        max-width: 100vh;
+        max-height: 100vh;
+        margin: 0;
+    }
+}
+
+/* iPad 和其他平板豎屏 */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1023px)
+and (orientation: portrait) {
+    .container {
+        padding: 0;
+    }
+    
+    .wheel-container {
+        width: 100vw;
+        height: 100vw;
+        max-width: 100vh;
+        max-height: 100vh;
+        margin: 0;
     }
 }
